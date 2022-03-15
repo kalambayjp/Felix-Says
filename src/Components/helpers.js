@@ -10,10 +10,9 @@ export const calculateAddedButtons = function() {
   return added;
 }
 
-export const iterateSequence = function(sequence) {
-  for (let i = 0; i < sequence.length; i++) {
-    
-  }
+export function timeout (ms) {
+  
+  return new Promise(resolve => setTimeout(resolve, ms))
 
 }
 

@@ -4,6 +4,50 @@ button {
   margin: 3px;
 }
 
-button:hover {
- box-shadow: 1px 1px 1px 1px;
+.red {
+  background-color: darkred;
+}
+.red:hover {
+ box-shadow: 2px 2px 1px 1px;
+ background-color: red;
+}
+.red.selected {
+  box-shadow: 2px 2px 1px 1px;
+  background-color: red;
+}
+
+.blue {
+  background-color: darkblue;
+}
+.blue:hover {
+  box-shadow: 2px 2px 1px 1px;
+  background-color: blue;
+}
+.blue.selected {
+  box-shadow: 2px 2px 1px 1px;
+  background-color: blue;
+}
+
+.orange {
+  background-color: darkorange;
+}
+.orange:hover {
+ box-shadow: 2px 2px 1px 1px;
+ background-color: orange;
+}
+.orange.selected {
+  box-shadow: 2px 2px 1px 1px;
+  background-color: orange; 
+}
+
+.green {
+  background-color: darkgreen;
+}
+.green:hover {
+ box-shadow: 2px 2px 1px 1px;
+ background-color: green;
+}
+.green.selected {
+  box-shadow: 2px 2px 1px 1px;
+  background-color: green; 
 }
