@@ -1,6 +1,3 @@
-
-
-
 export default function Header() {
 
   return (
@@ -8,4 +5,4 @@ export default function Header() {
       <h1>Felix Says</h1>
     </div>
   )
-}
+};

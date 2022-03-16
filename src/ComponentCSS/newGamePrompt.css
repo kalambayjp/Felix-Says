@@ -1,0 +1,10 @@
+#new-game {
+  width: 150px;
+  height: 50px;
+}
+.new-game-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

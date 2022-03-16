@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #e1e6e3;
+  background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png");
 }
 
 main {
@@ -10,6 +12,34 @@ main {
   justify-content: center;
 
   width: 70%;
-  
+}
+
+.felix-state {
+
+  width: 400px;
+  height: 600px;
   
 }
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-play {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+span {
+  margin-bottom: 5px;
+}
+
+
+
+

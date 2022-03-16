@@ -8,11 +8,11 @@ button {
   background-color: darkred;
 }
 .red:hover {
- box-shadow: 2px 2px 1px 1px;
+ border-color: white;
  background-color: red;
 }
 .red.selected {
-  box-shadow: 2px 2px 1px 1px;
+  border-color: white;
   background-color: red;
 }
 
@@ -20,34 +20,35 @@ button {
   background-color: darkblue;
 }
 .blue:hover {
-  box-shadow: 2px 2px 1px 1px;
+  border-color: white;
   background-color: blue;
 }
 .blue.selected {
-  box-shadow: 2px 2px 1px 1px;
+  border-color: white;
   background-color: blue;
 }
 
 .orange {
-  background-color: darkorange;
+  background-color: rgb(218, 121, 3);
 }
 .orange:hover {
- box-shadow: 2px 2px 1px 1px;
- background-color: orange;
+ border-color: white;
+ background-color: rgb(255, 167, 4);
+
 }
 .orange.selected {
-  box-shadow: 2px 2px 1px 1px;
+  border-color: white;
   background-color: orange; 
 }
 
 .green {
-  background-color: darkgreen;
+  background-color: rgb(2, 92, 2);
 }
 .green:hover {
- box-shadow: 2px 2px 1px 1px;
+ border-color: white;
  background-color: green;
 }
 .green.selected {
-  box-shadow: 2px 2px 1px 1px;
+  border-color: white;
   background-color: green; 
 }

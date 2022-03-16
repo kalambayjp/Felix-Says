@@ -1,16 +1,18 @@
-import './button.css'
+import '../ComponentCSS/button.css'
 
 export default function Button(props) {
-  const { color, selected, value, sequence } = props;
-  const compareSequence = sequence;
+  const { color, selected, value, activeGame, updateSelection } = props;
   
   function handleClick() {
-    console.log(value)
+    if (activeGame) {
+      updateSelection(value)
+    }
+    return;
   }
   
   return (
     <>
-    <button className={`${color} ${selected === value ? 'selected' : ''}`} onClick={() => handleClick()}></button>
+      <button className={`${color} ${selected === value ? 'selected' : ''}`} onClick={() => handleClick()}></button>
     </>
   )
-}
+};
