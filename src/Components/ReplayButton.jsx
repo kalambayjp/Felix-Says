@@ -8,8 +8,9 @@ export default function ReplayButton(props) {
   }
 
   return (
-    <div className={(activeGame && replayCount > 0) ? '' : 'hidden'}>
+    <div className={(activeGame && replayCount > 0) ? 'replay-button-div' : 'replay-button-div-hidden'}>
       <button id="replay-button" onClick={() => handleClick()}>Replay</button>
+      <p>Replays: {replayCount}</p>
     </div>
   )
 }

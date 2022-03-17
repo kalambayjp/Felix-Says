@@ -3,11 +3,12 @@ import Logic from './Components/Logic';
 import ButtonDisplay from './Components/ButtonDisplay';
 import Felix from './Components/Felix';
 import NewGamePrompt from './Components/NewGamePompt';
+import PlayerPrompt from './Components/PlayerPrompt';
+import ReplayButton from './Components/ReplayButton';
+import ReplayPopup from './Components/ReplayPopup'
 import { useEffect, useState } from 'react';
 import { calculateAddedButtons, timeout } from "./helpers/helpers.js"
 import './App.css';
-import PlayerPrompt from './Components/PlayerPrompt';
-import ReplayButton from './Components/ReplayButton';
 
 function App() {
 
@@ -54,17 +55,18 @@ function App() {
     return;
   }
 
-  function addToSequence() {
+  function incrementRound() {
     setRound((prevRound) => prevRound + 1);
     checkReplayEligibilty();
 
+    return;
+  }
+
+  function addToSequence() {
     const newNums = calculateAddedButtons();
     const newSequence = [...sequence, ...newNums];
-    console.log("add to sequence");
 
     setSequence(newSequence);
-  
-    return;
   }
 
   function compareInput (userInput) {
@@ -72,7 +74,6 @@ function App() {
       if (userInput === compareSequence[0]) {
         const newCompareSequence = [...compareSequence];
         newCompareSequence.shift();
-        console.log("correct");
     
         setCompareSequence([...newCompareSequence]);
 
@@ -82,7 +83,7 @@ function App() {
         
       } else if (userInput !== compareSequence[0]) {
         setStrikes((prevStrikes) => prevStrikes + 1)
-        console.log("incorrect", userInput, compareSequence[0]);
+        
         if (strikes === 1) {
           endGame()
         }
@@ -99,7 +100,7 @@ function App() {
     
     setUserMode(false);
     setDisplayMode(true);
-    addToSequence();
+    incrementRound();
     
     return;
   }
@@ -108,6 +109,7 @@ function App() {
     setActiveGame(false);
     setUserMode(false);
     setSequence([]);
+    setReplayCount(0)
     checkForHighScore();
     
     return
@@ -129,14 +131,18 @@ function App() {
   }
 
   function checkReplayEligibilty() {
-    if ( round % 3 === 0) {
+    if ( round > 0 && round % 3 === 0) {
       setReplayPopup(true)
       setReplayCount((replayCount) => replayCount + 1)
+      return
     }
+
+    addToSequence()
   }
 
   function closePopup() {
     setReplayPopup(false)
+    addToSequence()
   }
 
   return (
@@ -149,20 +155,16 @@ function App() {
       <main>
 
         <div className='display'>
-          <Logic 
-            round={round} 
-            activeGame={activeGame} 
-            startNewGame={startNewGame}  
-            highScore={highScore} 
-          />
-
           <div className='felix-state'>
             <Felix strikes={strikes}  />
           </div>
         </div>
         {
-          replayPopup && 
-          <replayPopup closePopup={closePopup} />
+          replayPopup &&
+          <div id='replay-popup-div'> 
+            <ReplayPopup closePopup={closePopup} />
+          </div>
+          
         }
         <div className='game-play' >
 
@@ -181,6 +183,13 @@ function App() {
             selected={selected} 
             activeGame={activeGame}
             updateSelection={updateSelection}
+          />
+
+          <Logic 
+            round={round} 
+            activeGame={activeGame} 
+            startNewGame={startNewGame}  
+            highScore={highScore} 
           />
 
         </div>

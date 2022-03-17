@@ -2,3 +2,14 @@
   width: 150px;
   height: 50px;
 }
+
+.replay-button-div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.replay-button-div-hidden {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
