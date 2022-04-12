@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Felix-Says/static/css/main.aea22f6c.css",
+    "main.js": "/Felix-Says/static/js/main.4d37e314.js",
+    "static/js/787.af699cd5.chunk.js": "/Felix-Says/static/js/787.af699cd5.chunk.js",
+    "static/media/IMG_3053.jpeg": "/Felix-Says/static/media/IMG_3053.b92fe6e18c59ee799c86.jpeg",
+    "static/media/IMG_1185.jpeg": "/Felix-Says/static/media/IMG_1185.4948cc2f73579d02581a.jpeg",
+    "static/media/IMG_3108.jpeg": "/Felix-Says/static/media/IMG_3108.a04b0a93ea57b0718ecc.jpeg",
+    "index.html": "/Felix-Says/index.html",
+    "main.aea22f6c.css.map": "/Felix-Says/static/css/main.aea22f6c.css.map",
+    "main.4d37e314.js.map": "/Felix-Says/static/js/main.4d37e314.js.map",
+    "787.af699cd5.chunk.js.map": "/Felix-Says/static/js/787.af699cd5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aea22f6c.css",
+    "static/js/main.4d37e314.js"
+  ]
+}
